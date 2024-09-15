@@ -25,7 +25,7 @@ function Page() {
 	return (
 		<StrictMode>
 			<Sidebar />
-				<RouterProvider router={router} />
+			<RouterProvider router={router} />
 		</StrictMode>
 	);
 }

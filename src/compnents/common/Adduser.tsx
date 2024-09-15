@@ -48,7 +48,7 @@ function AddUser() {
   }
 
   return (
-    <>
+    <div className="wrapper">
 
       <CssBaseline />
       <Container maxWidth="sm">
@@ -132,7 +132,7 @@ function AddUser() {
           </div>
         </Box>
       </Container>
-    </>
+    </div>
   );
 }
 

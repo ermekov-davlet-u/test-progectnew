@@ -1,6 +1,7 @@
 import {
 	Link
 } from "react-router-dom";
+import Header from "./Header";
 
 function PageWrapper({ children }: {
 	children: any
@@ -8,6 +9,7 @@ function PageWrapper({ children }: {
 	return (
 		<>
 			<main className="main-wrapper" >
+				<Header />
 				<div className="route">
 					<div className="route_names">
 						<div className="route_name">
