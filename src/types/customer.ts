@@ -9,6 +9,7 @@ export interface ICustomer {
     post?: IPost | null,
     brigade?: IBrigade | null;
     disabled?: boolean;
+    //createDate: Date; //время добавление, удобнее было бы сортировать по этому полю 
 }
 export interface IFilterCustomer {
     surname?: string;

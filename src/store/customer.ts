@@ -89,6 +89,11 @@ class CustomerStore {
     })
   }
 
+  getSortData(sort: "asc" | "desc" = "asc"): ICustomer[] {
+    if(sort == "desc") return this.customers.slice().reverse();
+    return this.customers; 
+  }
+
 }
 
 export const customerStore = new CustomerStore();

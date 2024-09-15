@@ -44,7 +44,7 @@ function ListTable() {
                     return <ListTableItem key={item.id + index} data={item} />
                   })
                   :
-                  customerStore.customers.map((item, index) => {
+                  customerStore.getSortData("desc").map((item, index) => {
                     return <ListTableItem key={item.id + index} data={item} />
                   })
               }

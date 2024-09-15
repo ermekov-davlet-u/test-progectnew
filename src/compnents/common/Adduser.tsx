@@ -123,9 +123,9 @@ function AddUser() {
                 </FormControl>
               </div>
               <Button variant="contained" disabled={!customer.name || !customer.surname || !customer.post} onClick={() => {
-                if(
-                  !customer.name || !customer.surname || !customer.post 
-                )
+                if (
+                  !customer.name || !customer.surname || !customer.post
+                ) return;
                 customerStore.add(customer)
               }}>Добавить</Button>
             </div>
