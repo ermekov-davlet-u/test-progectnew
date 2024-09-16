@@ -1,10 +1,10 @@
 import { customerStore } from "./customer"
-import { brigadetore } from './brigade';
+import { brigadeStore } from './brigade';
 import { postStore } from './post';
 
 
 export {
     customerStore,
-    brigadetore,
+    brigadeStore,
     postStore
 };

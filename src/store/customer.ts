@@ -66,7 +66,7 @@ class CustomerStore {
 
   add(data: ICustomer) {
     data.id = uuidv4();
-    if (data.post?.id == 3) {
+    if (data.post?.id !== 3) {
       data.brigade = null;
     }
     this.customers.push(data);

@@ -33,7 +33,13 @@ class BrigadeStore {
     this.brigade.push(data);
   }
 
+  update(body: IBrigade) {
+    this.brigade = this.brigade.map(item => {
+      if (item.id == body.id) return body;
+      return item;
+    });
+  }
 
 }
 
-export const brigadetore = new BrigadeStore();
+export const brigadeStore = new BrigadeStore();

@@ -1,6 +1,7 @@
 export interface IBrigade{
     id: string;
     name: string;
+    disabled?: boolean
 }
 
 export interface IPost{

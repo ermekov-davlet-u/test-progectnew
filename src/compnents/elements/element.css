@@ -34,7 +34,7 @@
     grid-template-columns: 60px 1fr;
     align-items: center;
     height: 60px;
-    max-width: 160px;
+    max-width: 260px;
     
 }
 
@@ -46,6 +46,7 @@
     max-width: 100%;
     text-overflow: ellipsis;
     overflow: hidden;
+    white-space: nowrap;
 }
 
 .search-box {

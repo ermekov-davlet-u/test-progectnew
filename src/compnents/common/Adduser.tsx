@@ -11,7 +11,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import { observer } from "mobx-react-lite";
-import { brigadetore, customerStore, postStore } from "../../store";
+import { brigadeStore, customerStore, postStore } from "../../store";
 import Button from '@mui/material/Button';
 import { ICustomer } from '../../types/customer';
 import Texteditor from "../ui/Texteditor";
@@ -113,9 +113,17 @@ function AddUser() {
                     placeholder="Объединить в бригаду"
                     size="small"
                     disabled={customer.post?.id != 3}
+                    name="brigade"
+                    onChange={(e) => {
+                      setCustomer(state => {
+                        const currentBr = brigadeStore.brigade.find(el => el.id == e.target.value);
+                        return {...state, brigade: currentBr};
+                      })
+                      
+                    }}
                   >
                     {
-                      brigadetore.brigade.map(brig => {
+                      brigadeStore.brigade.map(brig => {
                         return (<MenuItem value={brig.id}>{brig.name}</MenuItem>)
                       })
                     }
