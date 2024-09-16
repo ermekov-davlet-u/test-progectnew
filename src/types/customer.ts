@@ -6,7 +6,7 @@ export interface ICustomer {
     name: string;
     patronimic?: string;
     image?: string; // source, object
-    post?: IPost | null,
+    post: IPost | null,
     brigade?: IBrigade | null;
     disabled?: boolean;
     //createDate: Date; //время добавление, удобнее было бы сортировать по этому полю 

@@ -2,7 +2,7 @@ import ListTableItem from '../elements/ListTableItem';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import { observer } from 'mobx-react-lite';
-import { customerStore } from '../../store';
+import { brigadetore, customerStore } from '../../store';
 import SearchBox from '../elements/Search';
 import React, { useState } from 'react';
 import { IFilterCustomer } from '../../types/customer';
@@ -38,6 +38,13 @@ function ListTable() {
         }} >
           <div className="listTable_wrap">
             <div className="listTable">
+              {
+                brigadetore.brigade.map(br => {
+                  return customerStore.getDataByBrigade(br.id)?.map((item, index) => {
+                    return <ListTableItem key={item.id + index} data={item} />
+                  })
+                })
+              }
               {
                 filter.name ?
                   customerStore.filterData({ name: filter.name })?.map((item, index) => {

@@ -22,7 +22,7 @@ function ListTableItem({ data }: { data: ICustomer }) {
 					</div>
 					<div className="listitem-elem">
 						{
-							data.brigade?.name
+							data.post?.name
 						}
 					</div>
 					<div className="listitem-elem">
@@ -31,7 +31,6 @@ function ListTableItem({ data }: { data: ICustomer }) {
 						}}/>
 						<FiEdit3 />
 					</div>
-
 				</div>
 			</div>
 		</>

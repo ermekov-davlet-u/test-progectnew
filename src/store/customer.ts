@@ -90,8 +90,14 @@ class CustomerStore {
   }
 
   getSortData(sort: "asc" | "desc" = "asc"): ICustomer[] {
-    if(sort == "desc") return this.customers.slice().reverse();
-    return this.customers; 
+    if (sort == "desc") return this.customers.slice().reverse();
+    return this.customers;
+  }
+
+  getDataByBrigade(id: string): ICustomer[] {
+    return this.customers.filter(c => {
+      return c.brigade?.id == id;
+    });
   }
 
 }
